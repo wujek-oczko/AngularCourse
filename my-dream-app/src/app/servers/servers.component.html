@@ -18,6 +18,9 @@
   (click)="onCreateServer()">Add Server
 </button>
 <!--<p>{{ serverCreationStatus }}</p>-->
-<p *ngIf="serverCreated" >Server was created, server name is {{ serverName }}</p>
+<p *ngIf="serverCreated; else marker" >Server was created, server name is {{ serverName }}</p>
+<ng-template #marker>
+  <p>The content of the alternative to ngIf</p>
+</ng-template>
 <app-server></app-server>
 <app-server></app-server>
