@@ -22,5 +22,4 @@
 <ng-template #marker>
   <p>The content of the alternative to ngIf</p>
 </ng-template>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
